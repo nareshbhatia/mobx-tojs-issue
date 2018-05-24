@@ -1,0 +1,45 @@
+{
+  "name": "mobx-tojs-issue",
+  "description": "MobX toJS() Issue",
+  "version": "1.0.0",
+  "author": "Naresh Bhatia",
+  "license": "MIT",
+  "homepage": "https://github.com/nareshbhatia/mobx-tojs-issue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nareshbhatia/mobx-tojs-issue.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "mobx": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.0.4",
+    "jest": "^22.1.4",
+    "ts-jest": "^22.0.1",
+    "ts-loader": "^2.3.7",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.3"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
