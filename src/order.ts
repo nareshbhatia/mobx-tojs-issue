@@ -14,7 +14,8 @@ export class Order {
     ) {}
 
     serialize(): JsOrder {
-        return toJS(this);
+        // return toJS(this);
+        return JSON.parse(JSON.stringify(this));
     }
 }
 
